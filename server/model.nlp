@@ -1,0 +1,1864 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "in,is,like,pari,the,weather,what": {
+            "intent": "weather.inquiry",
+            "domain": "default"
+          },
+          "for,forecast,me,new,tell,the,weather,york": {
+            "intent": "weather.inquiry",
+            "domain": "default"
+          },
+          "mackbook": {
+            "intent": "amazone.inquiry",
+            "domain": "default"
+          },
+          "redmi": {
+            "intent": "amazone.inquiry",
+            "domain": "default"
+          },
+          "amazon,detail,from,i,need,product": {
+            "intent": "amazoneQuery.inquiry",
+            "domain": "default"
+          },
+          "a,amazon,detail,in,know,need,product,to": {
+            "intent": "amazoneQuery.inquiry",
+            "domain": "default"
+          },
+          "are,bot,of,type,which,you": {
+            "intent": "bot.inquiry",
+            "domain": "default"
+          },
+          "inventor,is,who,your": {
+            "intent": "inventor.inquiry",
+            "domain": "default"
+          },
+          "dilshad,is,who": {
+            "intent": "dilshad.inquiry",
+            "domain": "default"
+          },
+          "invent,was,who,you": {
+            "intent": "inventor.inquiry",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greetings.inquiry",
+            "domain": "default"
+          },
+          "heyi": {
+            "intent": "greetings.inquiry",
+            "domain": "default"
+          },
+          "hello": {
+            "intent": "greetings.inquiry",
+            "domain": "default"
+          },
+          "helloooo": {
+            "intent": "greetings.inquiry",
+            "domain": "default"
+          },
+          "heloooo": {
+            "intent": "greetings.inquiry",
+            "domain": "default"
+          },
+          "hellooo": {
+            "intent": "greetings.inquiry",
+            "domain": "default"
+          },
+          "hi,there": {
+            "intent": "greetings.inquiry",
+            "domain": "default"
+          },
+          "hai": {
+            "intent": "greetings.inquiry",
+            "domain": "default"
+          },
+          "are,how,you": {
+            "intent": "ask.inquiry",
+            "domain": "default"
+          },
+          "do,how,you": {
+            "intent": "ask.inquiry",
+            "domain": "default"
+          },
+          "is,name,what,your": {
+            "intent": "name.inquiry",
+            "domain": "default"
+          },
+          "are,who,you": {
+            "intent": "name.inquiry",
+            "domain": "default"
+          },
+          "ani,do,have,knowledg,you": {
+            "intent": "knowledge.inquiry",
+            "domain": "default"
+          },
+          "about,knowledg,what,your": {
+            "intent": "knowledge.inquiry",
+            "domain": "default"
+          },
+          "name,pleas": {
+            "intent": "name.inquiry",
+            "domain": "default"
+          },
+          "ok": {
+            "intent": "ok.inquiry",
+            "domain": "default"
+          },
+          "yes": {
+            "intent": "yes.inquiry",
+            "domain": "default"
+          },
+          "ani,dilshad,have,project": {
+            "intent": "dilshadProject.inquiry",
+            "domain": "default"
+          },
+          "are,dilshad,how,old": {
+            "intent": "dilshadAge.inquiry",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "weather.inquiry": "default",
+          "amazone.inquiry": "default",
+          "amazoneQuery.inquiry": "default",
+          "bot.inquiry": "default",
+          "inventor.inquiry": "default",
+          "dilshad.inquiry": "default",
+          "greetings.inquiry": "default",
+          "ask.inquiry": "default",
+          "name.inquiry": "default",
+          "knowledge.inquiry": "default",
+          "ok.inquiry": "default",
+          "yes.inquiry": "default",
+          "dilshadProject.inquiry": "default",
+          "dilshadAge.inquiry": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "What is the weather like in Paris?",
+            "intent": "weather.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "Tell me the weather forecast for New York",
+            "intent": "weather.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "mackBook ",
+            "intent": "amazone.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "redmi ",
+            "intent": "amazone.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "i need product details from amazone? ",
+            "intent": "amazoneQuery.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "need to know a product details in amazone? ",
+            "intent": "amazoneQuery.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "which type of bot are you ?",
+            "intent": "bot.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "which type of bot are you ?",
+            "intent": "bot.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "who is your inventor ?",
+            "intent": "inventor.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "who is dilshad ?",
+            "intent": "dilshad.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "who was invented you ?",
+            "intent": "inventor.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "hey ",
+            "intent": "greetings.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "heyy ",
+            "intent": "greetings.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greetings.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "helloooo",
+            "intent": "greetings.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "heloooo",
+            "intent": "greetings.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "hellooo",
+            "intent": "greetings.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi there",
+            "intent": "greetings.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "hai",
+            "intent": "greetings.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "how are you?",
+            "intent": "ask.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "how do you do ?",
+            "intent": "ask.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your name ?",
+            "intent": "name.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "who are you ?",
+            "intent": "name.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "do you have any knowledge?",
+            "intent": "knowledge.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "what about your knowledge?",
+            "intent": "knowledge.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "name please",
+            "intent": "name.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "ok ",
+            "intent": "ok.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "yes ",
+            "intent": "yes.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "dilshad have any projects ? ",
+            "intent": "dilshadProject.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "how old are dilshad? ",
+            "intent": "dilshadAge.inquiry"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "what": 1,
+              "is": 1,
+              "the": 1,
+              "weather": 1,
+              "like": 1,
+              "in": 1,
+              "pari": 1,
+              "tell": 1,
+              "me": 1,
+              "forecast": 1,
+              "for": 1,
+              "new": 1,
+              "york": 1,
+              "mackbook": 1,
+              "redmi": 1,
+              "i": 1,
+              "need": 1,
+              "product": 1,
+              "detail": 1,
+              "from": 1,
+              "amazon": 1,
+              "to": 1,
+              "know": 1,
+              "a": 1,
+              "which": 1,
+              "type": 1,
+              "of": 1,
+              "bot": 1,
+              "are": 1,
+              "you": 1,
+              "who": 1,
+              "your": 1,
+              "inventor": 1,
+              "dilshad": 1,
+              "was": 1,
+              "invent": 1,
+              "hey": 1,
+              "heyi": 1,
+              "hello": 1,
+              "helloooo": 1,
+              "heloooo": 1,
+              "hellooo": 1,
+              "hi": 1,
+              "there": 1,
+              "hai": 1,
+              "how": 1,
+              "do": 1,
+              "name": 1,
+              "have": 1,
+              "ani": 1,
+              "knowledg": 1,
+              "about": 1,
+              "pleas": 1,
+              "ok": 1,
+              "yes": 1,
+              "project": 1,
+              "old": 1
+            },
+            "intents": {
+              "weather.inquiry": 1,
+              "amazone.inquiry": 1,
+              "amazoneQuery.inquiry": 1,
+              "bot.inquiry": 1,
+              "inventor.inquiry": 1,
+              "dilshad.inquiry": 1,
+              "greetings.inquiry": 1,
+              "ask.inquiry": 1,
+              "name.inquiry": 1,
+              "knowledge.inquiry": 1,
+              "ok.inquiry": 1,
+              "yes.inquiry": 1,
+              "dilshadProject.inquiry": 1,
+              "dilshadAge.inquiry": 1
+            },
+            "intentFeatures": {
+              "weather.inquiry": {
+                "what": 1,
+                "is": 1,
+                "the": 1,
+                "weather": 1,
+                "like": 1,
+                "in": 1,
+                "pari": 1,
+                "tell": 1,
+                "me": 1,
+                "forecast": 1,
+                "for": 1,
+                "new": 1,
+                "york": 1
+              },
+              "amazone.inquiry": {
+                "mackbook": 1,
+                "redmi": 1
+              },
+              "amazoneQuery.inquiry": {
+                "i": 1,
+                "need": 1,
+                "product": 1,
+                "detail": 1,
+                "from": 1,
+                "amazon": 1,
+                "to": 1,
+                "know": 1,
+                "a": 1,
+                "in": 1
+              },
+              "bot.inquiry": {
+                "which": 1,
+                "type": 1,
+                "of": 1,
+                "bot": 1,
+                "are": 1,
+                "you": 1
+              },
+              "inventor.inquiry": {
+                "who": 1,
+                "is": 1,
+                "your": 1,
+                "inventor": 1,
+                "was": 1,
+                "invent": 1,
+                "you": 1
+              },
+              "dilshad.inquiry": {
+                "who": 1,
+                "is": 1,
+                "dilshad": 1
+              },
+              "greetings.inquiry": {
+                "hey": 1,
+                "heyi": 1,
+                "hello": 1,
+                "helloooo": 1,
+                "heloooo": 1,
+                "hellooo": 1,
+                "hi": 1,
+                "there": 1,
+                "hai": 1
+              },
+              "ask.inquiry": {
+                "how": 1,
+                "are": 1,
+                "you": 1,
+                "do": 1
+              },
+              "name.inquiry": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "name": 1,
+                "who": 1,
+                "are": 1,
+                "you": 1,
+                "pleas": 1
+              },
+              "knowledge.inquiry": {
+                "do": 1,
+                "you": 1,
+                "have": 1,
+                "ani": 1,
+                "knowledg": 1,
+                "what": 1,
+                "about": 1,
+                "your": 1
+              },
+              "ok.inquiry": {
+                "ok": 1
+              },
+              "yes.inquiry": {
+                "yes": 1
+              },
+              "dilshadProject.inquiry": {
+                "dilshad": 1,
+                "have": 1,
+                "ani": 1,
+                "project": 1
+              },
+              "dilshadAge.inquiry": {
+                "how": 1,
+                "old": 1,
+                "are": 1,
+                "dilshad": 1
+              }
+            },
+            "featuresToIntent": {
+              "what": [
+                "weather.inquiry",
+                "name.inquiry",
+                "knowledge.inquiry"
+              ],
+              "is": [
+                "weather.inquiry",
+                "inventor.inquiry",
+                "dilshad.inquiry",
+                "name.inquiry"
+              ],
+              "the": [
+                "weather.inquiry"
+              ],
+              "weather": [
+                "weather.inquiry"
+              ],
+              "like": [
+                "weather.inquiry"
+              ],
+              "in": [
+                "weather.inquiry",
+                "amazoneQuery.inquiry"
+              ],
+              "pari": [
+                "weather.inquiry"
+              ],
+              "tell": [
+                "weather.inquiry"
+              ],
+              "me": [
+                "weather.inquiry"
+              ],
+              "forecast": [
+                "weather.inquiry"
+              ],
+              "for": [
+                "weather.inquiry"
+              ],
+              "new": [
+                "weather.inquiry"
+              ],
+              "york": [
+                "weather.inquiry"
+              ],
+              "mackbook": [
+                "amazone.inquiry"
+              ],
+              "redmi": [
+                "amazone.inquiry"
+              ],
+              "i": [
+                "amazoneQuery.inquiry"
+              ],
+              "need": [
+                "amazoneQuery.inquiry"
+              ],
+              "product": [
+                "amazoneQuery.inquiry"
+              ],
+              "detail": [
+                "amazoneQuery.inquiry"
+              ],
+              "from": [
+                "amazoneQuery.inquiry"
+              ],
+              "amazon": [
+                "amazoneQuery.inquiry"
+              ],
+              "to": [
+                "amazoneQuery.inquiry"
+              ],
+              "know": [
+                "amazoneQuery.inquiry"
+              ],
+              "a": [
+                "amazoneQuery.inquiry"
+              ],
+              "which": [
+                "bot.inquiry"
+              ],
+              "type": [
+                "bot.inquiry"
+              ],
+              "of": [
+                "bot.inquiry"
+              ],
+              "bot": [
+                "bot.inquiry"
+              ],
+              "are": [
+                "bot.inquiry",
+                "ask.inquiry",
+                "name.inquiry",
+                "dilshadAge.inquiry"
+              ],
+              "you": [
+                "bot.inquiry",
+                "inventor.inquiry",
+                "ask.inquiry",
+                "name.inquiry",
+                "knowledge.inquiry"
+              ],
+              "who": [
+                "inventor.inquiry",
+                "dilshad.inquiry",
+                "name.inquiry"
+              ],
+              "your": [
+                "inventor.inquiry",
+                "name.inquiry",
+                "knowledge.inquiry"
+              ],
+              "inventor": [
+                "inventor.inquiry"
+              ],
+              "was": [
+                "inventor.inquiry"
+              ],
+              "invent": [
+                "inventor.inquiry"
+              ],
+              "dilshad": [
+                "dilshad.inquiry",
+                "dilshadProject.inquiry",
+                "dilshadAge.inquiry"
+              ],
+              "hey": [
+                "greetings.inquiry"
+              ],
+              "heyi": [
+                "greetings.inquiry"
+              ],
+              "hello": [
+                "greetings.inquiry"
+              ],
+              "helloooo": [
+                "greetings.inquiry"
+              ],
+              "heloooo": [
+                "greetings.inquiry"
+              ],
+              "hellooo": [
+                "greetings.inquiry"
+              ],
+              "hi": [
+                "greetings.inquiry"
+              ],
+              "there": [
+                "greetings.inquiry"
+              ],
+              "hai": [
+                "greetings.inquiry"
+              ],
+              "how": [
+                "ask.inquiry",
+                "dilshadAge.inquiry"
+              ],
+              "do": [
+                "ask.inquiry",
+                "knowledge.inquiry"
+              ],
+              "name": [
+                "name.inquiry"
+              ],
+              "pleas": [
+                "name.inquiry"
+              ],
+              "have": [
+                "knowledge.inquiry",
+                "dilshadProject.inquiry"
+              ],
+              "ani": [
+                "knowledge.inquiry",
+                "dilshadProject.inquiry"
+              ],
+              "knowledg": [
+                "knowledge.inquiry"
+              ],
+              "about": [
+                "knowledge.inquiry"
+              ],
+              "ok": [
+                "ok.inquiry"
+              ],
+              "yes": [
+                "yes.inquiry"
+              ],
+              "project": [
+                "dilshadProject.inquiry"
+              ],
+              "old": [
+                "dilshadAge.inquiry"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "what",
+                "is",
+                "the",
+                "weather",
+                "like",
+                "in",
+                "pari",
+                "tell",
+                "me",
+                "forecast",
+                "for",
+                "new",
+                "york",
+                "mackbook",
+                "redmi",
+                "i",
+                "need",
+                "product",
+                "detail",
+                "from",
+                "amazon",
+                "to",
+                "know",
+                "a",
+                "which",
+                "type",
+                "of",
+                "bot",
+                "are",
+                "you",
+                "who",
+                "your",
+                "inventor",
+                "dilshad",
+                "was",
+                "invent",
+                "hey",
+                "heyi",
+                "hello",
+                "helloooo",
+                "heloooo",
+                "hellooo",
+                "hi",
+                "there",
+                "hai",
+                "how",
+                "do",
+                "name",
+                "have",
+                "ani",
+                "knowledg",
+                "about",
+                "pleas",
+                "ok",
+                "yes",
+                "project",
+                "old"
+              ],
+              "intents": [
+                "weather.inquiry",
+                "amazone.inquiry",
+                "amazoneQuery.inquiry",
+                "bot.inquiry",
+                "inventor.inquiry",
+                "dilshad.inquiry",
+                "greetings.inquiry",
+                "ask.inquiry",
+                "name.inquiry",
+                "knowledge.inquiry",
+                "ok.inquiry",
+                "yes.inquiry",
+                "dilshadProject.inquiry",
+                "dilshadAge.inquiry"
+              ],
+              "perceptrons": [
+                [
+                  1.1328881978988647,
+                  0.8149541020393372,
+                  3.319694995880127,
+                  3.319694995880127,
+                  2.0219197273254395,
+                  1.794974446296692,
+                  2.0219197273254395,
+                  1.297775149345398,
+                  1.297775149345398,
+                  1.297775149345398,
+                  1.297775149345398,
+                  1.297775149345398,
+                  1.297775149345398,
+                  -0.16402211785316467,
+                  -0.15766967833042145,
+                  -0.06519084423780441,
+                  -0.2848987877368927,
+                  -0.2848987877368927,
+                  -0.2848987877368927,
+                  -0.06519084423780441,
+                  -0.2848987877368927,
+                  -0.1820145845413208,
+                  -0.1820145845413208,
+                  -0.1820145845413208,
+                  -0.10979827493429184,
+                  -0.10979827493429184,
+                  -0.10979827493429184,
+                  -0.10979827493429184,
+                  -0.1552179604768753,
+                  -0.2634574770927429,
+                  -0.5381826162338257,
+                  -1.0953378677368164,
+                  -0.17986243963241577,
+                  -0.30369889736175537,
+                  -0.034446749836206436,
+                  -0.034446749836206436,
+                  -0.11842068284749985,
+                  -0.11382642388343811,
+                  -0.10940960794687271,
+                  -0.10516341775655746,
+                  -0.10108130425214767,
+                  -0.09715694189071655,
+                  -0.08668122440576553,
+                  -0.08668122440576553,
+                  -0.09003175050020218,
+                  -0.05618955194950104,
+                  -0.045445360243320465,
+                  -0.7343394756317139,
+                  -0.04042729362845421,
+                  -0.04042729362845421,
+                  -0.17271190881729126,
+                  -0.15167278051376343,
+                  -0.027567490935325623,
+                  -0.0628046914935112,
+                  -0.060374800115823746,
+                  -0.02022886835038662,
+                  -0.00351525261066854,
+                  -0.14032840728995674
+                ],
+                [
+                  -0.4395039975643158,
+                  -0.6438237428665161,
+                  -0.2511458396911621,
+                  -0.2511458396911621,
+                  -0.03207805007696152,
+                  -0.16625931859016418,
+                  -0.03207805007696152,
+                  -0.21889889240264893,
+                  -0.21889889240264893,
+                  -0.21889889240264893,
+                  -0.21889889240264893,
+                  -0.21889889240264893,
+                  -0.21889889240264893,
+                  12.194568634033203,
+                  12.172999382019043,
+                  -0.24253606796264648,
+                  -0.3797135353088379,
+                  -0.3797135353088379,
+                  -0.3797135353088379,
+                  -0.24253606796264648,
+                  -0.3797135353088379,
+                  -0.11528819799423218,
+                  -0.11528819799423218,
+                  -0.11528819799423218,
+                  -0.22596475481987,
+                  -0.22596475481987,
+                  -0.22596475481987,
+                  -0.22596475481987,
+                  -0.46089619398117065,
+                  -0.941412627696991,
+                  -0.7650341391563416,
+                  -0.6543048620223999,
+                  -0.22830235958099365,
+                  -0.7241486310958862,
+                  -0.21825097501277924,
+                  -0.21825097501277924,
+                  -1.8145520687103271,
+                  -1.8065017461776733,
+                  -1.798081874847412,
+                  -1.7893024682998657,
+                  -1.7801740169525146,
+                  -1.770706295967102,
+                  -0.9131489396095276,
+                  -0.9131489396095276,
+                  -1.7581984996795654,
+                  -0.519260585308075,
+                  -0.36431950330734253,
+                  -0.9468249082565308,
+                  -0.3851732313632965,
+                  -0.3851732313632965,
+                  -0.3974539041519165,
+                  -0.3336317837238312,
+                  -0.8731959462165833,
+                  -1.74274742603302,
+                  -1.731773853302002,
+                  -0.32135117053985596,
+                  -0.111396424472332,
+                  1.817634571406925
+                ],
+                [
+                  -0.2716386914253235,
+                  -0.4030302166938782,
+                  -0.2233256697654724,
+                  -0.2233256697654724,
+                  -0.1894574910402298,
+                  0.706073522567749,
+                  -0.1894574910402298,
+                  -0.017167288810014725,
+                  -0.017167288810014725,
+                  -0.017167288810014725,
+                  -0.017167288810014725,
+                  -0.017167288810014725,
+                  -0.017167288810014725,
+                  -0.09345576912164688,
+                  -0.09294668585062027,
+                  1.7462430000305176,
+                  2.675046443939209,
+                  2.675046443939209,
+                  2.675046443939209,
+                  1.7462430000305176,
+                  2.675046443939209,
+                  0.9288031458854675,
+                  0.9288031458854675,
+                  0.9288031458854675,
+                  -0.1160266324877739,
+                  -0.1160266324877739,
+                  -0.1160266324877739,
+                  -0.1160266324877739,
+                  -0.18088778853416443,
+                  -0.29807278513908386,
+                  -0.2148207128047943,
+                  -0.15245212614536285,
+                  -0.0596906878054142,
+                  -0.14376495778560638,
+                  -0.04398422688245773,
+                  -0.04398422688245773,
+                  -0.13323795795440674,
+                  -0.1280752420425415,
+                  -0.12311165779829025,
+                  -0.11833955347537994,
+                  -0.11375158280134201,
+                  -0.10934068262577057,
+                  -0.09744247049093246,
+                  -0.09744247049093246,
+                  -0.10133635252714157,
+                  -0.07886114716529846,
+                  -0.05490186810493469,
+                  -0.1131928339600563,
+                  -0.07022826373577118,
+                  -0.07022826373577118,
+                  -0.05683925375342369,
+                  -0.0287591814994812,
+                  -0.07846672832965851,
+                  -0.1024068221449852,
+                  -0.09881768375635147,
+                  -0.04127588868141174,
+                  -0.011904453858733177,
+                  0.09304389660246427
+                ],
+                [
+                  -0.013539677485823631,
+                  -0.14523465931415558,
+                  -0.0029821586795151234,
+                  -0.0029821586795151234,
+                  0,
+                  -0.0020729973912239075,
+                  0,
+                  -0.0029821586795151234,
+                  -0.0029821586795151234,
+                  -0.0029821586795151234,
+                  -0.0029821586795151234,
+                  -0.0029821586795151234,
+                  -0.0029821586795151234,
+                  -0.004759873263537884,
+                  -0.004565392155200243,
+                  -0.002622655825689435,
+                  -0.006006981246173382,
+                  -0.006006981246173382,
+                  -0.006006981246173382,
+                  -0.002622655825689435,
+                  -0.006006981246173382,
+                  -0.0020729973912239075,
+                  -0.0020729973912239075,
+                  -0.0020729973912239075,
+                  3.225593328475952,
+                  3.225593328475952,
+                  3.225593328475952,
+                  3.225593328475952,
+                  1.1102632284164429,
+                  0.5651638507843018,
+                  -1.3833293914794922,
+                  -0.08525777608156204,
+                  -0.05256487801671028,
+                  -0.20503051578998566,
+                  -0.22709080576896667,
+                  -0.22709080576896667,
+                  -0.08243756741285324,
+                  -0.07914092391729355,
+                  -0.07597587257623672,
+                  -0.07293717563152313,
+                  -0.07001978904008865,
+                  -0.06721889227628708,
+                  -0.06159835308790207,
+                  -0.06159835308790207,
+                  -0.062069691717624664,
+                  -1.4012271165847778,
+                  -0.38368818163871765,
+                  -0.02271335944533348,
+                  -0.15687182545661926,
+                  -0.15687182545661926,
+                  -0.15871870517730713,
+                  -0.0011693338165059686,
+                  -0.008812514133751392,
+                  -0.009646349586546421,
+                  -0.009250150993466377,
+                  -0.00011397865455364808,
+                  -0.13970796763896942,
+                  -0.29208912352021066
+                ],
+                [
+                  -2.3053524494171143,
+                  0.5412020683288574,
+                  -0.09444180130958557,
+                  -0.09444180130958557,
+                  -0.07014544308185577,
+                  -0.0889606848359108,
+                  -0.07014544308185577,
+                  -0.011989911086857319,
+                  -0.011989911086857319,
+                  -0.011989911086857319,
+                  -0.011989911086857319,
+                  -0.011989911086857319,
+                  -0.011989911086857319,
+                  -0.02693195827305317,
+                  -0.02585294097661972,
+                  -0.014097766019403934,
+                  -0.02785160392522812,
+                  -0.02785160392522812,
+                  -0.02785160392522812,
+                  -0.014097766019403934,
+                  -0.02785160392522812,
+                  -0.007886767387390137,
+                  -0.007886767387390137,
+                  -0.007886767387390137,
+                  -0.10249418020248413,
+                  -0.10249418020248413,
+                  -0.10249418020248413,
+                  -0.10249418020248413,
+                  -3.9586117267608643,
+                  0.575742781162262,
+                  3.9440901279449463,
+                  4.055905342102051,
+                  6.258427619934082,
+                  -3.9136505126953125,
+                  5.1505537033081055,
+                  5.1505537033081055,
+                  -0.1898406744003296,
+                  -0.18281106650829315,
+                  -0.17603881657123566,
+                  -0.16951465606689453,
+                  -0.1632295846939087,
+                  -0.1571750044822693,
+                  -0.1231575459241867,
+                  -0.1231575459241867,
+                  -0.14634129405021667,
+                  -0.6467814445495605,
+                  -0.5990530252456665,
+                  -1.7373250722885132,
+                  -0.19640065729618073,
+                  -0.19640065729618073,
+                  -0.707003653049469,
+                  -0.4935514032840729,
+                  -0.016867926344275475,
+                  -0.03323826193809509,
+                  -0.03190484270453453,
+                  -0.003441993147134781,
+                  0,
+                  -0.5476887873287997
+                ],
+                [
+                  -1.0203362703323364,
+                  4.611385345458984,
+                  -0.5971494317054749,
+                  -0.5971494317054749,
+                  -0.5947864651679993,
+                  -0.5980609059333801,
+                  -0.5947864651679993,
+                  -0.0012435636017471552,
+                  -0.0012435636017471552,
+                  -0.0012435636017471552,
+                  -0.0012435636017471552,
+                  -0.0012435636017471552,
+                  -0.0012435636017471552,
+                  -0.007992326281964779,
+                  -0.007667939644306898,
+                  -0.004810711368918419,
+                  -0.00883609987795353,
+                  -0.00883609987795353,
+                  -0.00883609987795353,
+                  -0.004810711368918419,
+                  -0.00883609987795353,
+                  -0.0017068098532035947,
+                  -0.0017068098532035947,
+                  -0.0017068098532035947,
+                  0,
+                  0,
+                  0,
+                  0,
+                  -2.196582078933716,
+                  -1.5870964527130127,
+                  4.08810567855835,
+                  -4.215421199798584,
+                  -3.7898712158203125,
+                  6.035358905792236,
+                  -0.9450176358222961,
+                  -0.9450176358222961,
+                  -0.0865996852517128,
+                  -0.08331755548715591,
+                  -0.08015887439250946,
+                  -0.07711903005838394,
+                  -0.07419361174106598,
+                  -0.07137833535671234,
+                  -0.056288860738277435,
+                  -0.056288860738277435,
+                  -0.06624997407197952,
+                  -1.6317135095596313,
+                  -0.019915839657187462,
+                  -0.4172448217868805,
+                  -1.8052250146865845,
+                  -1.8052250146865845,
+                  -0.012135050259530544,
+                  -0.007579156197607517,
+                  -0.016641663387417793,
+                  -0.03444376587867737,
+                  -0.033077601343393326,
+                  -1.799468994140625,
+                  -1.5823171138763428,
+                  -0.6004212011630994
+                ],
+                [
+                  -2.225445032119751,
+                  -2.1752517223358154,
+                  -1.1097848415374756,
+                  -1.1097848415374756,
+                  -0.2513355612754822,
+                  -0.6892447471618652,
+                  -0.2513355612754822,
+                  -0.7905816435813904,
+                  -0.7905816435813904,
+                  -0.7905816435813904,
+                  -0.7905816435813904,
+                  -0.7905816435813904,
+                  -0.7905816435813904,
+                  -6.675516605377197,
+                  -6.637161731719971,
+                  -0.9005891680717468,
+                  -1.2716766595840454,
+                  -1.2716766595840454,
+                  -1.2716766595840454,
+                  -0.9005891680717468,
+                  -1.2716766595840454,
+                  -0.3708610534667969,
+                  -0.3708610534667969,
+                  -0.3708610534667969,
+                  -0.2621135711669922,
+                  -0.2621135711669922,
+                  -0.2621135711669922,
+                  -0.2621135711669922,
+                  -2.167797803878784,
+                  -3.672220468521118,
+                  -2.2777886390686035,
+                  -2.2563440799713135,
+                  -0.3315620422363281,
+                  -2.4296810626983643,
+                  -0.468060165643692,
+                  -0.468060165643692,
+                  7.313546180725098,
+                  7.320988178253174,
+                  7.297760486602783,
+                  7.273138046264648,
+                  7.247142314910889,
+                  7.219798564910889,
+                  3.679292678833008,
+                  3.679292678833008,
+                  7.1841511726379395,
+                  -2.2054789066314697,
+                  -1.430820345878601,
+                  -3.8854994773864746,
+                  -1.6728870868682861,
+                  -1.6728870868682861,
+                  -1.5723398923873901,
+                  -1.1492948532104492,
+                  -3.1281211376190186,
+                  -6.768688678741455,
+                  -6.73592472076416,
+                  -1.2498482465744019,
+                  -0.3806772530078888,
+                  6.910646373182357
+                ],
+                [
+                  -0.19255462288856506,
+                  -0.15321412682533264,
+                  -0.06606821715831757,
+                  -0.06606821715831757,
+                  -0.02241712622344494,
+                  -0.05283006653189659,
+                  -0.02241712622344494,
+                  -0.03334701433777809,
+                  -0.03334701433777809,
+                  -0.03334701433777809,
+                  -0.03334701433777809,
+                  -0.03334701433777809,
+                  -0.03334701433777809,
+                  -0.09050226956605911,
+                  -0.08717115968465805,
+                  -0.031423307955265045,
+                  -0.06587262451648712,
+                  -0.06587262451648712,
+                  -0.06587262451648712,
+                  -0.031423307955265045,
+                  -0.06587262451648712,
+                  -0.021057777106761932,
+                  -0.021057777106761932,
+                  -0.021057777106761932,
+                  -1.2008886337280273,
+                  -1.2008886337280273,
+                  -1.2008886337280273,
+                  -1.2008886337280273,
+                  0.21896810829639435,
+                  4.943178176879883,
+                  -4.587531089782715,
+                  -0.15847282111644745,
+                  -0.0013094289461150765,
+                  -4.248406887054443,
+                  -0.6837323307991028,
+                  -0.6837323307991028,
+                  -0.037822261452674866,
+                  -0.03643170744180679,
+                  -0.03509163856506348,
+                  -0.03380025178194046,
+                  -0.032555803656578064,
+                  -0.03135661408305168,
+                  -0.024684961885213852,
+                  -0.024684961885213852,
+                  -0.029214035719633102,
+                  8.728720664978027,
+                  1.1910349130630493,
+                  -0.2388237714767456,
+                  -2.231494665145874,
+                  -2.231494665145874,
+                  -2.2515313625335693,
+                  -0.02646549418568611,
+                  -0.09888801723718643,
+                  -0.17076167464256287,
+                  -0.165098637342453,
+                  -0.009559146128594875,
+                  -4.229288101196289,
+                  -0.3227363054494283
+                ],
+                [
+                  4.060067653656006,
+                  -0.9271417856216431,
+                  -0.703013002872467,
+                  -0.703013002872467,
+                  -0.584245502948761,
+                  -0.6601985096931458,
+                  -0.584245502948761,
+                  -0.07553167641162872,
+                  -0.07553167641162872,
+                  -0.07553167641162872,
+                  -0.07553167641162872,
+                  -0.07553167641162872,
+                  -0.07553167641162872,
+                  -0.461995393037796,
+                  -0.44898170232772827,
+                  -0.11342000961303711,
+                  -0.191509410738945,
+                  -0.191509410738945,
+                  -0.191509410738945,
+                  -0.11342000961303711,
+                  -0.191509410738945,
+                  -0.048893772065639496,
+                  -0.048893772065639496,
+                  -0.048893772065639496,
+                  -2.037174701690674,
+                  -2.037174701690674,
+                  -2.037174701690674,
+                  -2.037174701690674,
+                  6.000174045562744,
+                  2.5850298404693604,
+                  5.053493976593018,
+                  0.61184161901474,
+                  -4.073698043823242,
+                  -3.459351062774658,
+                  -3.492765188217163,
+                  -3.492765188217163,
+                  -0.228215292096138,
+                  -0.22573044896125793,
+                  -0.21968814730644226,
+                  -0.21378158032894135,
+                  -0.2080090045928955,
+                  -0.20236864686012268,
+                  -0.1387200951576233,
+                  -0.1387200951576233,
+                  -0.1963624805212021,
+                  -7.437576770782471,
+                  -0.4041832983493805,
+                  10.713403701782227,
+                  -0.47714337706565857,
+                  -0.47714337706565857,
+                  -2.288433790206909,
+                  -1.9143062829971313,
+                  4.096146106719971,
+                  -0.5215243101119995,
+                  -0.5060560703277588,
+                  -0.08907639980316162,
+                  -0.4920392334461212,
+                  -0.4077069820487018
+                ],
+                [
+                  1.9058879613876343,
+                  -1.9593994617462158,
+                  -0.28872013092041016,
+                  -0.28872013092041016,
+                  -0.21156829595565796,
+                  -0.27244579792022705,
+                  -0.21156829595565796,
+                  -0.03827442601323128,
+                  -0.03827442601323128,
+                  -0.03827442601323128,
+                  -0.03827442601323128,
+                  -0.03827442601323128,
+                  -0.03827442601323128,
+                  -0.12944981455802917,
+                  -0.12441404908895493,
+                  -0.06489463150501251,
+                  -0.10895965248346329,
+                  -0.10895965248346329,
+                  -0.10895965248346329,
+                  -0.06489463150501251,
+                  -0.10895965248346329,
+                  -0.026452338322997093,
+                  -0.026452338322997093,
+                  -0.026452338322997093,
+                  -0.2479405701160431,
+                  -0.2479405701160431,
+                  -0.2479405701160431,
+                  -0.2479405701160431,
+                  -0.5841050744056702,
+                  1.0736194849014282,
+                  -0.646184504032135,
+                  1.8667701482772827,
+                  -0.26376092433929443,
+                  -1.9291216135025024,
+                  -0.27419012784957886,
+                  -0.27419012784957886,
+                  -0.09733305126428604,
+                  -0.09372743219137192,
+                  -0.09025391191244125,
+                  -0.08690769970417023,
+                  -0.08368420600891113,
+                  -0.08057897537946701,
+                  -0.06394271552562714,
+                  -0.06394271552562714,
+                  -0.07497256994247437,
+                  -2.385207414627075,
+                  1.8895810842514038,
+                  -1.5011060237884521,
+                  2.1649367809295654,
+                  2.1649367809295654,
+                  7.53668737411499,
+                  3.538670063018799,
+                  -0.12092626839876175,
+                  -0.1999608874320984,
+                  -0.1925508826971054,
+                  -1.8328288793563843,
+                  -0.054178595542907715,
+                  -0.5598000241157473
+                ],
+                [
+                  -0.26366230845451355,
+                  -0.2738654613494873,
+                  -0.19069482386112213,
+                  -0.19069482386112213,
+                  -0.06676249206066132,
+                  -0.12855084240436554,
+                  -0.06676249206066132,
+                  -0.10644400864839554,
+                  -0.10644400864839554,
+                  -0.10644400864839554,
+                  -0.10644400864839554,
+                  -0.10644400864839554,
+                  -0.10644400864839554,
+                  -0.9022823572158813,
+                  -0.8977068662643433,
+                  -0.12390249222517014,
+                  -0.17405711114406586,
+                  -0.17405711114406586,
+                  -0.17405711114406586,
+                  -0.12390249222517014,
+                  -0.17405711114406586,
+                  -0.044696204364299774,
+                  -0.044696204364299774,
+                  -0.044696204364299774,
+                  -0.09648849070072174,
+                  -0.09648849070072174,
+                  -0.09648849070072174,
+                  -0.09648849070072174,
+                  -0.24464400112628937,
+                  -0.4208511710166931,
+                  -0.31516072154045105,
+                  -0.30344679951667786,
+                  -0.11988908052444458,
+                  -0.38783782720565796,
+                  -0.138612762093544,
+                  -0.138612762093544,
+                  -0.8918821215629578,
+                  -0.8868284821510315,
+                  -0.8816031813621521,
+                  -0.8762124180793762,
+                  -0.870662271976471,
+                  -0.8649585843086243,
+                  -0.4516841769218445,
+                  -0.4516841769218445,
+                  -0.8572790622711182,
+                  -0.3096836507320404,
+                  -0.17247404158115387,
+                  -0.45775896310806274,
+                  -0.20510676503181458,
+                  -0.20510676503181458,
+                  -0.17405451834201813,
+                  -0.16289788484573364,
+                  -0.4408353269100189,
+                  13.055283546447754,
+                  -0.9087815880775452,
+                  -0.1938072293996811,
+                  -0.13616648316383362,
+                  0.919336091360212
+                ],
+                [
+                  -0.2658001780509949,
+                  -0.28092125058174133,
+                  -0.1925935596227646,
+                  -0.1925935596227646,
+                  -0.06951425969600677,
+                  -0.12869180738925934,
+                  -0.06951425969600677,
+                  -0.10450538247823715,
+                  -0.10450538247823715,
+                  -0.10450538247823715,
+                  -0.10450538247823715,
+                  -0.10450538247823715,
+                  -0.10450538247823715,
+                  -0.904741644859314,
+                  -0.9003738760948181,
+                  -0.1273375302553177,
+                  -0.17927755415439606,
+                  -0.17927755415439606,
+                  -0.17927755415439606,
+                  -0.1273375302553177,
+                  -0.17927755415439606,
+                  -0.04139583185315132,
+                  -0.04139583185315132,
+                  -0.04139583185315132,
+                  -0.09930781275033951,
+                  -0.09930781275033951,
+                  -0.09930781275033951,
+                  -0.09930781275033951,
+                  -0.252155601978302,
+                  -0.42517781257629395,
+                  -0.3213081657886505,
+                  -0.30532312393188477,
+                  -0.1197904497385025,
+                  -0.3985058665275574,
+                  -0.1397799849510193,
+                  -0.1397799849510193,
+                  -0.894721269607544,
+                  -0.8898603916168213,
+                  -0.8848223686218262,
+                  -0.8796131610870361,
+                  -0.8742387294769287,
+                  -0.8687052130699158,
+                  -0.4523470401763916,
+                  -0.4523470401763916,
+                  -0.8612954616546631,
+                  -0.31009459495544434,
+                  -0.16862396895885468,
+                  -0.458968847990036,
+                  -0.21103280782699585,
+                  -0.21103280782699585,
+                  -0.17260858416557312,
+                  -0.16098114848136902,
+                  -0.44137123227119446,
+                  -0.8521506786346436,
+                  13.05711841583252,
+                  -0.19925633072853088,
+                  -0.1376100778579712,
+                  0.9177887714236265
+                ],
+                [
+                  -0.05580011382699013,
+                  -1.4132089614868164,
+                  -0.0968969464302063,
+                  -0.0968969464302063,
+                  -0.039716023951768875,
+                  -0.07925031334161758,
+                  -0.039716023951768875,
+                  -0.04141775518655777,
+                  -0.04141775518655777,
+                  -0.04141775518655777,
+                  -0.04141775518655777,
+                  -0.04141775518655777,
+                  -0.04141775518655777,
+                  -0.11625941842794418,
+                  -0.11202026903629303,
+                  -0.04077158495783806,
+                  -0.08208893239498138,
+                  -0.08208893239498138,
+                  -0.08208893239498138,
+                  -0.04077158495783806,
+                  -0.08208893239498138,
+                  -0.02528977021574974,
+                  -0.02528977021574974,
+                  -0.02528977021574974,
+                  -0.03453991189599037,
+                  -0.03453991189599037,
+                  -0.03453991189599037,
+                  -0.03453991189599037,
+                  -0.9592927694320679,
+                  -2.0982954502105713,
+                  -1.3714195489883423,
+                  -0.042587462812662125,
+                  -0.029062461107969284,
+                  2.959537982940674,
+                  -0.009998427703976631,
+                  -0.009998427703976631,
+                  -0.07347346097230911,
+                  -0.07064580172300339,
+                  -0.06792640686035156,
+                  -0.06531116366386414,
+                  -0.06279611587524414,
+                  -0.060377441346645355,
+                  -0.05358680337667465,
+                  -0.05358680337667465,
+                  -0.05599627271294594,
+                  -0.9179480671882629,
+                  -2.0275955200195312,
+                  -0.02772648073732853,
+                  3.1607248783111572,
+                  3.1607248783111572,
+                  -2.0207037925720215,
+                  -0.0016192810144275427,
+                  -0.02219562418758869,
+                  -0.023248685523867607,
+                  -0.022325268015265465,
+                  5.178330421447754,
+                  -0.9079084992408752,
+                  -0.17433884675091002
+                ],
+                [
+                  -0.053196463733911514,
+                  -1.5074150562286377,
+                  -0.10184326022863388,
+                  -0.10184326022863388,
+                  -0.04307464510202408,
+                  -0.08369076997041702,
+                  -0.04307464510202408,
+                  -0.04174768552184105,
+                  -0.04174768552184105,
+                  -0.04174768552184105,
+                  -0.04174768552184105,
+                  -0.04174768552184105,
+                  -0.04174768552184105,
+                  -0.09933721274137497,
+                  -0.09554473310709,
+                  -0.04144885763525963,
+                  -0.08268735557794571,
+                  -0.08268735557794571,
+                  -0.08268735557794571,
+                  -0.04144885763525963,
+                  -0.08268735557794571,
+                  -0.025236055254936218,
+                  -0.025236055254936218,
+                  -0.025236055254936218,
+                  -0.3136587142944336,
+                  -0.3136587142944336,
+                  -0.3136587142944336,
+                  -0.3136587142944336,
+                  2.3768386840820312,
+                  -4.170921802520752,
+                  -1.5794745683670044,
+                  -0.032308656722307205,
+                  -0.024739723652601242,
+                  3.794558048248291,
+                  -0.005487267393618822,
+                  -0.005487267393618822,
+                  -0.06082213297486305,
+                  -0.05849720537662506,
+                  -0.0562606155872345,
+                  -0.05410902202129364,
+                  -0.05203922837972641,
+                  -0.050048138946294785,
+                  -0.04414721950888634,
+                  -0.04414721950888634,
+                  -0.046452220529317856,
+                  2.5338075160980225,
+                  -0.27899599075317383,
+                  -0.00805404968559742,
+                  -1.0304309129714966,
+                  -1.0304309129714966,
+                  -0.0026201053988188505,
+                  -0.0026201053988188505,
+                  -0.00805404968559742,
+                  -0.007931062020361423,
+                  -0.007607273757457733,
+                  -1.0304309129714966,
+                  6.238388538360596,
+                  -0.6941735287905463
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "What is the weather like in Paris?"
+      ],
+      [
+        "en",
+        "Tell me the weather forecast for New York"
+      ],
+      [
+        "en",
+        "mackBook "
+      ],
+      [
+        "en",
+        "redmi "
+      ],
+      [
+        "en",
+        "i need product details from amazone? "
+      ],
+      [
+        "en",
+        "need to know a product details in amazone? "
+      ],
+      [
+        "en",
+        "which type of bot are you ?"
+      ],
+      [
+        "en",
+        "which type of bot are you ?"
+      ],
+      [
+        "en",
+        "who is your inventor ?"
+      ],
+      [
+        "en",
+        "who is dilshad ?"
+      ],
+      [
+        "en",
+        "who was invented you ?"
+      ],
+      [
+        "en",
+        "hey "
+      ],
+      [
+        "en",
+        "heyy "
+      ],
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "helloooo"
+      ],
+      [
+        "en",
+        "heloooo"
+      ],
+      [
+        "en",
+        "hellooo"
+      ],
+      [
+        "en",
+        "hi there"
+      ],
+      [
+        "en",
+        "hai"
+      ],
+      [
+        "en",
+        "how are you?"
+      ],
+      [
+        "en",
+        "how do you do ?"
+      ],
+      [
+        "en",
+        "what is your name ?"
+      ],
+      [
+        "en",
+        "who are you ?"
+      ],
+      [
+        "en",
+        "do you have any knowledge?"
+      ],
+      [
+        "en",
+        "what about your knowledge?"
+      ],
+      [
+        "en",
+        "name please"
+      ],
+      [
+        "en",
+        "ok "
+      ],
+      [
+        "en",
+        "yes "
+      ],
+      [
+        "en",
+        "dilshad have any projects ? "
+      ],
+      [
+        "en",
+        "how old are dilshad? "
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "amazone.inquiry": [
+          {
+            "answer": "searching.........."
+          }
+        ],
+        "knowledge.inquiry": [
+          {
+            "answer": "actually iam started my first walk let me see the world hah ? "
+          }
+        ],
+        "dilshadAge.inquiry": [
+          {
+            "answer": "i dont know exactly may be around 19 "
+          }
+        ],
+        "dilshadProject.inquiry": [
+          {
+            "answer": "you can refer his github profile https://github.com/dilshadanikkadan"
+          }
+        ],
+        "weather.inquiry": [
+          {
+            "answer": "I am not a weather bot, sorry!"
+          }
+        ],
+        "amazoneQuery.inquiry": [
+          {
+            "answer": "which product do  you need ?"
+          }
+        ],
+        "ok.inquiry": [
+          {
+            "answer": "You need any other help?!"
+          }
+        ],
+        "yes.inquiry": [
+          {
+            "answer": "tell me iam listening...!"
+          }
+        ],
+        "yeah.inquiry": [
+          {
+            "answer": "tell me iam listening...!"
+          }
+        ],
+        "name.inquiry": [
+          {
+            "answer": "My name is D-Bot!"
+          }
+        ],
+        "greetings.inquiry": [
+          {
+            "answer": "Hi there! How can I help you?"
+          }
+        ],
+        "bot.inquiry": [
+          {
+            "answer": "iam a service bot ,but iam new to the word !!?"
+          }
+        ],
+        "inventor.inquiry": [
+          {
+            "answer": "I was devolped by dilshad"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
