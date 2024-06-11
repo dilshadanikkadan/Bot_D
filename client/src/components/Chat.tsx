@@ -32,7 +32,7 @@ const Chat = () => {
       messageEndRef.current!.scrollIntoView({ behavior: "smooth" });
     }
   }, [messages,messageEndRef]);
-
+//
   return (
     <div className="h-[95%]  w-full md:w-[30%] shadow-md rounded-lg flex flex-col">
       <div className="w-full bg-white h-[10vh] flex items-center">

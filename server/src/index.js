@@ -4,7 +4,7 @@ const cors = require("cors");
 const { processInput, trainModel } = require("./service/Training/response");
 const app = express();
 const port = 3001;
-
+//
 const corsOptions = {
   origin: [
     "https://bot-d-c4nk.vercel.app",
