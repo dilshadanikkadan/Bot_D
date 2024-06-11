@@ -34,7 +34,7 @@ const Chat = () => {
   }, [messages,messageEndRef]);
 
   return (
-    <div className="h-[95%]  w-full md:w-[50%] shadow-md rounded-lg flex flex-col">
+    <div className="h-[95%]  w-full md:w-[30%] shadow-md rounded-lg flex flex-col">
       <div className="w-full bg-white h-[10vh] flex items-center">
         <img src="/bot.png" className="w-20" alt="" />
         <h3 className="font-mono font-semibold"> Bot Dilu</h3>

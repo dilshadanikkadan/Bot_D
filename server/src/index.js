@@ -7,7 +7,7 @@ const port = 3001;
 
 const corsOptions = {
   origin: [
-    "https://client-hospital-qv1u.vercel.app",
+    "https://bot-d-c4nk.vercel.app/",
     "http://localhost:5173",
     "http://localhost:3000",
     "http://medifly.site",
